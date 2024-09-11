@@ -9,8 +9,8 @@ spec:
   template:
     spec:
       containers:
-      - name: sleep
-        image: alpine:latest
-        command: ["sleep", "10"]
+      - name: kubectl
+        image: bitnami/kubectl
+        command: ["kubectl", "rollout", "restart", "deployment/guestbook-ui"]
       restartPolicy: Never
   backoffLimit: 0
